@@ -1,4 +1,4 @@
-package PF1;
+package Exo1;
 
 public class PaireP<A,B> {
     private A _fst;
@@ -23,12 +23,12 @@ public class PaireP<A,B> {
                 getClass().getSimpleName(), _snd.getClass().getSimpleName());
     }
 
-    @Override
+
     public <C> IPaireP<C, B> changeFst(C val) {
-        return new PaireP<>(val, _snd);
+        return (IPaireP<C, B>) new PaireP(val, _snd);
     }
 
-    @Override
+
     public <C> PaireP<A, C> changeSnd(C val) {
         return new PaireP<>(_fst, val);
     }

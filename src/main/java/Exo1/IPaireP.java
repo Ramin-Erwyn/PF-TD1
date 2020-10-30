@@ -1,4 +1,4 @@
-package PF1;
+package Exo1;
 
 public interface IPaireP<A,B> {
     A fst();

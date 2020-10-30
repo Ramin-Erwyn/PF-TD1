@@ -1,7 +1,13 @@
 package PF1;
-import java.util.stream.Stream;
+
+import java.util.Set;
 
 public interface Arbre {
-    Stream<Integer> taille();
-    boolean contient
+    int taille();
+    boolean contient(final Integer val);
+    Set<Integer> valeurs();
+    Integer somme();
+    Integer min();
+    Integer max();
+    boolean estTrie();
 }
