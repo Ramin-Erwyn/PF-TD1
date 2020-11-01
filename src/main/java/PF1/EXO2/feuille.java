@@ -1,8 +1,8 @@
-package PF1;
+package PF1.EXO2;
 
 import java.util.Set;
 
-class Feuille implements Arbre{
+class Feuille implements Arbre {
 private final int valeur;
 public  Feuille(final int valeur){
     this.valeur=valeur;

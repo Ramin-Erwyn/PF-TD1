@@ -3,6 +3,8 @@
  */
 package PF1;
 
+import PF1.EXO2.Arbre;
+import PF1.EXO2.Feuille;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

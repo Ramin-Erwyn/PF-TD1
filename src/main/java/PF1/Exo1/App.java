@@ -1,7 +1,7 @@
-package Exo1;
+package PF1.Exo1;
 
-import Exo1.IPaireP;
-import Exo1.PaireP;
+import PF1.Exo1.IPaireP;
+import PF1.Exo1.PaireP;
 
 public class App {
     public static void q21(){
