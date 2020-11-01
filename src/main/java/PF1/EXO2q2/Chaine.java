@@ -1,14 +1,9 @@
 package PF1.EXO2q2;
 
-public class Chaine implements Sommable<Chaine> {
+    public class Chaine<S> implements Sommable<S>{
 
     private String s;
     public Chaine(String s) { this.s = s; }
-
-    @Override
-    public Chaine sommer(Chaine s) {
-        return new Chaine(getS() + getS());
-    }
 
     public String getS() {
         return s;
@@ -32,4 +27,8 @@ public class Chaine implements Sommable<Chaine> {
         return "La Chaine [s=" + s + "]";
     }
 
-}
+        @Override
+        public S sommer(S s) {
+            return (S) new Chaine<S>(getS() + getS());
+        }
+    }
