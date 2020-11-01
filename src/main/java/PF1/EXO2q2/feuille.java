@@ -4,8 +4,9 @@ import PF1.EXO2.Arbre;
 
 import java.util.Set;
 
-class Feuille implements Arbre {
-private final int valeur;
+class Feuille<S extends Sommable<S>>{
+    private final int valeur;
+    //private final int valeur;
 public  Feuille(final int valeur){
     this.valeur=valeur;
 }
