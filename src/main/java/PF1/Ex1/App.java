@@ -1,6 +1,4 @@
-package PF1.Exo1;
-
-import PF1.Exo1.*;
+package PF1.Ex1;
 
 public class App {
     public static void q21(String[] args){
