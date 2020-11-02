@@ -1,5 +1,6 @@
 package PF1.EXO2;
 
+import java.util.HashSet;
 import java.util.Set;
 
 class Feuille implements Arbre {
@@ -20,26 +21,28 @@ public  Feuille(final int valeur){
 
     @Override
     public Set<Integer> valeurs() {
-        return null;
+       // Set<Integer> rtr =new HashSet<>();
+        // rtr.add(this.valeur);
+        return Set.of(this.valeur);
     }
 
     @Override
     public Integer somme() {
-        return null;
+        return this.valeur;
     }
 
     @Override
     public Integer min() {
-        return null;
+        return this.valeur;
     }
 
     @Override
     public Integer max() {
-        return null;
+        return this.valeur;
     }
 
     @Override
     public boolean estTrie() {
-        return false;
+        return true;
     }
 }
