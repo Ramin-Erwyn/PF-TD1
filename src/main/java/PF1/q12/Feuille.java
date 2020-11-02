@@ -18,4 +18,32 @@ import java.util.Set;
         @Override
         public Set<T> valeurs() { return new HashSet<>(List.of(this.valeur)); }
 
-}
+        @Override
+        public T somme() {
+            return null;
+        }
+
+
+
+
+        @Override
+        public T compareTo() {
+            return null;
+        }
+
+        @Override
+        public T min() {
+            return this.valeur;
+        }
+
+        @Override
+        public T max() {
+            return this.valeur;
+        }
+
+        @Override
+        public boolean estTrie() {
+            return true;
+        }
+
+    }

@@ -3,8 +3,8 @@
  */
 package PF1;
 
-import PF1.EXO2.Arbre;
-import PF1.EXO2.Feuille;
+import PF1.EX2.Arbre;
+import PF1.EX2.Feuille;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -12,38 +12,39 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import PF1.arbres.*;
+import PF1.q12.*;
+
 
 public class AppTest {
 
     public static final Arbre arbre0() {
-        return new Noeud(new ArrayList<Arbre>());
+        return (Arbre) new Noeud(new ArrayList<Arbre>());
     }
 
     public static final Arbre arbre1() {
         final Arbre f1 = new Feuille(1);
         final Arbre f2 = new Feuille(2);
-        final Arbre n1 = new Noeud(List.of(f1,f2));
+        final Arbre n1 = (Arbre) new Noeud(List.of(f1,f2));
         final Arbre f3 = new Feuille(3);
-        final Arbre n2 = new Noeud(List.of(n1,f3));
+        final Arbre n2 = (Arbre) new Noeud(List.of(n1,f3));
         return n2;
     }
 
     public static final Arbre arbre2() {
         final Arbre f1 = new Feuille(2);
         final Arbre f2 = new Feuille(3);
-        final Arbre n1 = new Noeud(List.of(f1,f2));
+        final Arbre n1 = (Arbre) new Noeud(List.of(f1,f2));
         final Arbre f3 = new Feuille(1);
-        final Arbre n2 = new Noeud(List.of(n1,f3));
+        final Arbre n2 = (Arbre) new Noeud(List.of(n1,f3));
         return n2;
     }
 
     public static final Arbre arbre3() {
         final Arbre f1 = new Feuille(2);
         final Arbre f2 = new Feuille(1);
-        final Arbre n1 = new Noeud(List.of(f1,f2));
+        final Arbre n1 = (Arbre) new Noeud(List.of(f1,f2));
         final Arbre f3 = new Feuille(3);
-        final Arbre n2 = new Noeud(List.of(n1,f3));
+        final Arbre n2 = (Arbre) new Noeud(List.of(n1,f3));
         return n2;
     }
 

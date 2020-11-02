@@ -38,5 +38,59 @@ class Noeud<T extends Sommable<T>> implements Arbre<T> {
         this.fils.forEach(fils -> fusion.addAll(fils.valeurs()));
         return fusion;
     }
+
+    @Override
+    public T somme() {
+        if(fils ==null|| fils.size()==0)
+            return null;
+        T rtr = fils.get(0).somme();
+        for(int i =1;i<fils.size();i++){
+            rtr =rtr.sommer(fils.get(i).somme());
+        }
+        return rtr;
+    }
+
+
+
+
+    @Override
+    public String compareTo() {
+        //if (other == null) return 1;
+        //return m_value.CompareTo(other.m_value);
+        return null;
+    }
+
+    @Override
+    public T min() {
+        if(fils ==null||fils.size()==0)
+            return null;
+        T rtr = fils.get(0).min();
+        for(int i =1;i<fils.size();i++){
+            T min = fils.get(i).min();
+            if(min< rtr){
+                rtr =min;
+            }
+        }
+        return rtr;
+    }
+
+    @Override
+    public T max() {
+        if(fils ==null||fils.size()==0)
+            return null;
+        T rtr = fils.get(0).max();
+        for(int i =1;i>fils.size();i++){
+            T max = fils.get(i).max();
+            if(max>  rtr){
+                rtr =max;
+            }
+        }
+        return rtr;
+    }
+
+    @Override
+    public boolean estTrie() {
+        return false;
+    }
 }
 
