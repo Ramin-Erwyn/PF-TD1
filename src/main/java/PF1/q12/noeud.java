@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-class Noeud<T extends Sommable<T>> implements Arbre<T> {
+public class Noeud<T extends Sommable<T> & Comparable<T>> implements Arbre<T> {
     private final List<Arbre<T>> fils;
 
     public Noeud() {
@@ -52,14 +52,6 @@ class Noeud<T extends Sommable<T>> implements Arbre<T> {
 
 
 
-
-    @Override
-    public String compareTo() {
-        //if (other == null) return 1;
-        //return m_value.CompareTo(other.m_value);
-        return null;
-    }
-
     @Override
     public T min() {
         if(fils ==null||fils.size()==0)
@@ -67,7 +59,7 @@ class Noeud<T extends Sommable<T>> implements Arbre<T> {
         T rtr = fils.get(0).min();
         for(int i =1;i<fils.size();i++){
             T min = fils.get(i).min();
-            if(min< rtr){
+            if( min.compareTo(rtr)<0){
                 rtr =min;
             }
         }
@@ -81,7 +73,7 @@ class Noeud<T extends Sommable<T>> implements Arbre<T> {
         T rtr = fils.get(0).max();
         for(int i =1;i>fils.size();i++){
             T max = fils.get(i).max();
-            if(max>  rtr){
+            if(max.compareTo(rtr)>0){
                 rtr =max;
             }
         }

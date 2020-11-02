@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-    public class Feuille<T extends Sommable<T>> implements Arbre<T> {
+    public class Feuille<T extends Sommable<T> & Comparable<T>> implements Arbre<T> {
         private final T valeur;
 
         public Feuille(T valeur) { this.valeur = valeur; }
@@ -23,13 +23,6 @@ import java.util.Set;
             return null;
         }
 
-
-
-
-        @Override
-        public T compareTo() {
-            return null;
-        }
 
         @Override
         public T min() {
