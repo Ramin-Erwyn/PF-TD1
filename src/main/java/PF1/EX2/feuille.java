@@ -2,7 +2,7 @@ package PF1.EX2;
 
 import java.util.Set;
 
-public class Feuille implements Arbre {
+class Feuille implements Arbre {
 private final int valeur;
 public  Feuille(final int valeur){
     this.valeur=valeur;
