@@ -1,4 +1,4 @@
-package PF1.EXO2;
+package PF1.EX2;
 
 import java.util.Set;
 

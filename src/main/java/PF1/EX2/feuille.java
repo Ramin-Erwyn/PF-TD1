@@ -1,6 +1,5 @@
-package PF1.EXO2;
+package PF1.EX2;
 
-import java.util.HashSet;
 import java.util.Set;
 
 class Feuille implements Arbre {
